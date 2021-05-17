@@ -20,8 +20,8 @@ public class Calculator {
     public String findFiveFirstTaskToReading(List<Task> tasks) {
         return tasks.stream()
                 .filter(task -> task.getType().equals(TaskType.READING))
-                .limit(5)
                 .sorted(Comparator.comparing(Task::getCreatedOn))
+                .limit(5)
                 .map(Task::getTitle)
                 .collect(Collectors.joining(", "));
     }
