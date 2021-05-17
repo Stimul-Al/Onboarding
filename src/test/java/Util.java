@@ -42,4 +42,26 @@ public class Util {
 
         return Arrays.asList(task1, task2, task3, task4, task5);
     }
+
+    public static String infoStudents (){
+        return "Math: (Nik: 8, Alex: 10, David: 7)\n" +
+                "Physic: (Nik: 8, Alex: 9, David: 6)\n" +
+                "English: (Nik: 8, Alex: 8, David: 6)";
+    }
+
+    public static String groupById() {
+        return "{CODING=[Task(id=CODING, title=Write a mobile application to store my tasks, type=CODING, createdOn=2015-07-03, done=false, tags=[coding, mobile], dueTo=null)], WRITING=[Task(id=WRITING, title=Write a blog on Java 8 Streams, type=WRITING, createdOn=2015-07-04, done=false, tags=[blogging, writing, streams], dueTo=null)], READING=[Task(id=READING, title=Read Version Control with Git book, type=READING, createdOn=2015-07-01, done=false, tags=[git, books, reading], dueTo=null), Task(id=READING, title=Read Java 8 Lambdas book, type=READING, createdOn=2015-07-02, done=false, tags=[books, java8, reading], dueTo=null), Task(id=READING, title=Read Domain Driven Design book, type=READING, createdOn=2015-07-05, done=false, tags=[books, ddd, reading], dueTo=null)]}";
+    }
+
+    public static String groupByTitle() {
+        return "{Write a blog on Java 8 Streams=[Task(id=WRITING, title=Write a blog on Java 8 Streams, type=WRITING, createdOn=2015-07-04, done=false, tags=[blogging, writing, streams], dueTo=null)], Read Domain Driven Design book=[Task(id=READING, title=Read Domain Driven Design book, type=READING, createdOn=2015-07-05, done=false, tags=[books, ddd, reading], dueTo=null)], Read Java 8 Lambdas book=[Task(id=READING, title=Read Java 8 Lambdas book, type=READING, createdOn=2015-07-02, done=false, tags=[books, java8, reading], dueTo=null)], Write a mobile application to store my tasks=[Task(id=CODING, title=Write a mobile application to store my tasks, type=CODING, createdOn=2015-07-03, done=false, tags=[coding, mobile], dueTo=null)], Read Version Control with Git book=[Task(id=READING, title=Read Version Control with Git book, type=READING, createdOn=2015-07-01, done=false, tags=[git, books, reading], dueTo=null)]}";
+    }
+
+    public static String groupByType() {
+        return "{WRITING=[Task(id=WRITING, title=Write a blog on Java 8 Streams, type=WRITING, createdOn=2015-07-04, done=false, tags=[blogging, writing, streams], dueTo=null)], READING=[Task(id=READING, title=Read Version Control with Git book, type=READING, createdOn=2015-07-01, done=false, tags=[git, books, reading], dueTo=null), Task(id=READING, title=Read Java 8 Lambdas book, type=READING, createdOn=2015-07-02, done=false, tags=[books, java8, reading], dueTo=null), Task(id=READING, title=Read Domain Driven Design book, type=READING, createdOn=2015-07-05, done=false, tags=[books, ddd, reading], dueTo=null)], CODING=[Task(id=CODING, title=Write a mobile application to store my tasks, type=CODING, createdOn=2015-07-03, done=false, tags=[coding, mobile], dueTo=null)]}";
+    }
+
+    public static String groupByDate() {
+        return "{2015-07-04=[Task(id=WRITING, title=Write a blog on Java 8 Streams, type=WRITING, createdOn=2015-07-04, done=false, tags=[blogging, writing, streams], dueTo=null)], 2015-07-05=[Task(id=READING, title=Read Domain Driven Design book, type=READING, createdOn=2015-07-05, done=false, tags=[books, ddd, reading], dueTo=null)], 2015-07-02=[Task(id=READING, title=Read Java 8 Lambdas book, type=READING, createdOn=2015-07-02, done=false, tags=[books, java8, reading], dueTo=null)], 2015-07-03=[Task(id=CODING, title=Write a mobile application to store my tasks, type=CODING, createdOn=2015-07-03, done=false, tags=[coding, mobile], dueTo=null)], 2015-07-01=[Task(id=READING, title=Read Version Control with Git book, type=READING, createdOn=2015-07-01, done=false, tags=[git, books, reading], dueTo=null)]}";
+    }
 }
