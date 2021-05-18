@@ -1,10 +1,13 @@
-import by.leverx.dto.TaskDto;
-import by.leverx.mapper.TaskMapper;
-import by.leverx.mapper.TaskMapperImpl;
-import by.leverx.model.Task;
+import by.leverx.task_one.dto.TaskDto;
+import by.leverx.task_one.mapper.TaskMapper;
+import by.leverx.task_one.mapper.TaskMapperImpl;
+import by.leverx.task_one.model.Task;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import util.Util;
+
+import static util.Util.getTask;
 
 public class MapperTest {
 
@@ -18,7 +21,7 @@ public class MapperTest {
     @Test
     void checkMapper() {
         //given
-        Task task = Util.getTask().get(0);
+        Task task = getTask().get(0);
 
         //when
         TaskDto dto = mapper.mapToDto(task);

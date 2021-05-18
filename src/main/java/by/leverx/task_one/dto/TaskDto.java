@@ -1,6 +1,6 @@
-package by.leverx.dto;
+package by.leverx.task_one.dto;
 
-import by.leverx.model.enums.TaskType;
+import by.leverx.task_one.model.enums.TaskType;
 import lombok.Builder;
 import lombok.Data;
 
@@ -16,5 +16,5 @@ public class TaskDto {
     private final String title;
     private final TaskType type;
     private final LocalDate createdOn;
-    private Set<String> tags = new HashSet<>();
+    private Set<String> tags;
 }

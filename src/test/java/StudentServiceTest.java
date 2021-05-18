@@ -1,14 +1,17 @@
-import by.leverx.model.Student;
-import by.leverx.model.enums.Subject;
-import by.leverx.service.StudentService;
-import by.leverx.service.impl.StudentServiceImpl;
+import by.leverx.task_one.model.Student;
+import by.leverx.task_one.model.enums.Subject;
+import by.leverx.task_one.service.StudentService;
+import by.leverx.task_one.service.impl.StudentServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import util.Util;
 
 import java.util.List;
 
-public class StudentTest {
+import static util.Util.getStudents;
+
+public class StudentServiceTest {
 
     private StudentService service;
 
@@ -20,7 +23,7 @@ public class StudentTest {
     @Test
     void avgSubject_happyPath() {
         //given
-        List<Student> students = Util.getStudents();
+        List<Student> students = getStudents();
 
         double avM = (10 + 7 + 8) / 3D;
 
@@ -34,7 +37,7 @@ public class StudentTest {
     @Test
     void groupStudentsBySubject_happyPath() {
         //given
-        List<Student> students = Util.getStudents();
+        List<Student> students = getStudents();
         String infoExpected = Util.infoStudents();
 
         //when

@@ -1,7 +1,7 @@
-package by.leverx.service;
+package by.leverx.task_one.service;
 
-import by.leverx.model.Student;
-import by.leverx.model.enums.Subject;
+import by.leverx.task_one.model.Student;
+import by.leverx.task_one.model.enums.Subject;
 
 import java.util.List;
 

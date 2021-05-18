@@ -1,7 +1,7 @@
-package by.leverx.mapper;
+package by.leverx.task_one.mapper;
 
-import by.leverx.dto.TaskDto;
-import by.leverx.model.Task;
+import by.leverx.task_one.dto.TaskDto;
+import by.leverx.task_one.model.Task;
 
 public class TaskMapperImpl implements TaskMapper {
 
