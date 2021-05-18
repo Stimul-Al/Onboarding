@@ -1,6 +1,6 @@
-package by.leverx.model;
+package by.leverx.task_one.model;
 
-import by.leverx.model.enums.TaskType;
+import by.leverx.task_one.model.enums.TaskType;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 

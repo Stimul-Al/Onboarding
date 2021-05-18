@@ -1,10 +1,15 @@
-import by.leverx.model.Student;
-import by.leverx.model.enums.Subject;
-import by.leverx.model.Task;
-import by.leverx.model.enums.TaskType;
+package util;
+
+import by.leverx.task_one.model.Person;
+import by.leverx.task_one.model.Skill;
+import by.leverx.task_one.model.Student;
+import by.leverx.task_one.model.enums.Subject;
+import by.leverx.task_one.model.Task;
+import by.leverx.task_one.model.enums.TaskType;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -44,9 +49,9 @@ public class Util {
     }
 
     public static String infoStudents (){
-        return "Math: (Nik: 8, Alex: 10, David: 7)\n" +
-                "Physic: (Nik: 8, Alex: 9, David: 6)\n" +
-                "English: (Nik: 8, Alex: 8, David: 6)";
+        return "English: (Alex: 8, David: 6, Nik: 8)\n" +
+                "Physic: (Alex: 9, David: 6, Nik: 8)\n" +
+                "Math: (Alex: 10, David: 7, Nik: 8)";
     }
 
     public static String groupById() {
@@ -63,5 +68,32 @@ public class Util {
 
     public static String groupByDate() {
         return "{2015-07-04=[Task(id=WRITING, title=Write a blog on Java 8 Streams, type=WRITING, createdOn=2015-07-04, done=false, tags=[blogging, writing, streams], dueTo=null)], 2015-07-05=[Task(id=READING, title=Read Domain Driven Design book, type=READING, createdOn=2015-07-05, done=false, tags=[books, ddd, reading], dueTo=null)], 2015-07-02=[Task(id=READING, title=Read Java 8 Lambdas book, type=READING, createdOn=2015-07-02, done=false, tags=[books, java8, reading], dueTo=null)], 2015-07-03=[Task(id=CODING, title=Write a mobile application to store my tasks, type=CODING, createdOn=2015-07-03, done=false, tags=[coding, mobile], dueTo=null)], 2015-07-01=[Task(id=READING, title=Read Version Control with Git book, type=READING, createdOn=2015-07-01, done=false, tags=[git, books, reading], dueTo=null)]}";
+    }
+
+    public static List<Person> getPersons() {
+        List<Person> persons = new ArrayList<>();
+        persons.add(new Person(1L, "Lokesh", new Skill("English", 10),
+                new Skill("Kannada", 20), new Skill("Hindi", 10)));
+
+        persons.add(new Person(2L, "Mahesh", new Skill("English", 10),
+                new Skill("Kannada", 30), new Skill("Hindi", 50)));
+
+        persons.add(new Person(3L, "Ganesh", new Skill("English", 10),
+                new Skill("Kannada", 20), new Skill("Hindi", 40)));
+
+        persons.add(new Person(4L, "Ramesh", new Skill("English", 10),
+                new Skill("Kannada", 20), new Skill("Hindi", 40)));
+
+        persons.add(new Person(5L, "Suresh", new Skill("English", 10),
+                new Skill("Kannada", 40), new Skill("Hindi", 40)));
+
+        persons.add(new Person(6L, "Gnanesh", new Skill("English", 100),
+                new Skill("Kannada", 20), new Skill("Hindi", 40)));
+
+        return persons;
+    }
+
+    public static String getPersonsOfSkills (){
+        return "[\"English\": \"Gnanesh\", \"Kannada\": \"Suresh\", \"Urdu\": \"null\", \"Hindi\": \"Mahesh\"]";
     }
 }

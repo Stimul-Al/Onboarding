@@ -1,7 +1,8 @@
-package by.leverx.service;
+package by.leverx.task_one.service;
 
-import by.leverx.model.Task;
-import by.leverx.model.enums.TaskType;
+import by.leverx.task_one.dto.TaskDto;
+import by.leverx.task_one.model.Task;
+import by.leverx.task_one.model.enums.TaskType;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -10,6 +11,8 @@ import java.util.Map;
 public interface TaskService {
 
     String findFiveFirstTaskToReading(List<Task> tasks);
+
+    List<TaskDto> mapToDto(List<Task> tasks);
 
     Map<String, List<Task>> groupByTitle(List<Task> tasks);
 

@@ -1,6 +1,5 @@
-package by.leverx.model;
+package by.leverx.task_one.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.HashMap;
